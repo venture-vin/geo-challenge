@@ -6,7 +6,9 @@ This is a tabular dataset of the locations of every store of a major national re
 
 # Deliverables
 
-Please download the file (rather than forking this repo) and, do the exercise, and then upload to your own repo.
+- Strategy, parse the csv file, so that data can be manipulated and compared
+- Convert given address to latitude and longitude and within particular bounds filter it down to the few closest lat/long distances
+- Continue filtering the closest lat/long based on which one is closest
 
 Then, write a script or application that, given a reasonably well-formed address string like:
 
