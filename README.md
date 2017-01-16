@@ -1,36 +1,18 @@
-# Coding challenge
+# Strategy
+I looked up what geocoding gems or APIs are out there, and came up with two that I wanted to try. I then knew I need to parse the csv file, so that data can be manipulated and compared. I thought about what would be the easiest way to compare data, and decided that if I have latitudes and longitudes given the gem's that I found, I will be able to find distances between initial location and destination. Once I found all of the distances, I put them in an array, which would be easy to sort through and find the min distance. 
 
-In this repo there is store-locations.csv
+Some caveats: I originally tried to use an API gem that wasn't returning the proper results and had to debug to come to a different solution. Additionally, I tried to implement with classes but kept getting empty string returns, so figured methods will work just as fine without a class wrapper. I like using classes and modules because they make things a lot cleaner, but figure this is an initial solution that works and could be improved upon and updated. 
 
-This is a tabular dataset of the locations of every store of a major national retail chain.
+I would like to implement this into a simple App either with Rails or React, for a nice front-end UI effects. 
 
-# Deliverables
+## Assumptions
+* The user input will be a string that will include enough information for Geocode converter to retrieve latitude and longitude
+* The minimum distance between coordinates is not always necessarily the best, due to the way actual route may go, so assuming the linear minimum distance will still be a fairly accurate representation of the closest location
+* Distance will not be negative
 
-- Strategy, parse the csv file, so that data can be manipulated and compared
-- Convert given address to latitude and longitude and within particular bounds filter it down to the few closest lat/long distances
-- Continue filtering the closest lat/long based on which one is closest
-- gem install geokit
-
-Then, write a script or application that, given a reasonably well-formed address string like:
-
-1770 Union St, San Francisco, CA 94115
-
-Returns the address of the geographically closest store from the dataset.
-
-Also please write up a paragraph or two about how your solution works, any assumptions you made, or caveats about your implementation, and put it in this readme file.
-
-Send me a github link to the final project.
-
-# Notes
-
-Feel free to do this in whatever language you would like, and focus on the problem itself; the way data gets input into the program is not important. Command line, GUI application, or even editing an obvious variable at the top of a file. Whatever. As long as it's reasonably easy for me to run your code and there are clear instructions for doing so.
-
-You might need to use external APIs or services to get a working solution. That's fine. Also fine to make it work entirely offline. To the extent you need any algorithms, I'm obviously not expecting you to reinvent anything from scratch, so use Google judiciously, as well as any libraries you find.
-
-If you do add cool polish or go above an beyond in some way, feel free, but *by far the most important thing is delivering working software that solves the problem of finding the closest location of this store*.
-
-I know which one is closest to my house, and the first thing I'll do is verify that it returns the address I expect.
-
-I'm hoping this will take well under 2 hours; I did it in a language I know well and (with about 12 tabs open and tons of google searching) got a rough implementation working very quickly.
-
-There are a ton of different ways to do this -- be creative!
+# Instructions
+* Download the repo 
+* In the terminal type: gem install geocoder
+* In the terminal type: ruby runner.rb
+* After the prompt input the address
+* Voila!

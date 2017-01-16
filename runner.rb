@@ -22,4 +22,7 @@ distances = []
 # if distance less than 1 mile return results
 end
 
-puts store_filter("1770 Union St, San Francisco, CA 94115")
+puts "Please type in an address and we'll find the nearest store!"
+address = gets.chomp
+
+puts "The nearest store is at address: #{store_filter(address)}"
