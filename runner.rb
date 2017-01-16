@@ -3,9 +3,9 @@ require 'geocoder'
 
 
 def store_filter(address)
-all = parse_from_store_file('store-locations.csv')
-home = Geocoder.coordinates(address)
-distances = []
+  all = parse_from_store_file('store-locations.csv')
+  home = Geocoder.coordinates(address)
+  distances = []
 
   all.each_with_index do |coord, index|
     address = coord[:address]
