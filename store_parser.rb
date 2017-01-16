@@ -7,5 +7,3 @@ require 'csv'
     return collection
   end
 
-all = parse_from_store_file('store-locations.csv')
-
