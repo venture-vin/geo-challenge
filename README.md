@@ -5,6 +5,10 @@ Some caveats: I originally tried to use an API gem that wasn't returning the pro
 
 I would like to implement this into a simple App either with Rails or React, for a nice front-end UI effects. 
 
+##Udpate 
+I decided to see if I can implement this with python, instead of implementing this with a UI I was already familiar with. 
+In the process I have figured out that I could get a better implementation that doesn't include a second "loop", with keeping track of the minimum distance and a counter for finding the right index right there and then. 
+
 ## Assumptions
 * The user input will be a string that will include enough information for Geocode converter to retrieve latitude and longitude
 * The minimum distance between coordinates is not always necessarily the best, due to the way actual route may go, so assuming the linear minimum distance will still be a fairly accurate representation of the closest location
