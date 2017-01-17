@@ -28,10 +28,14 @@ def nearest_distance(origin):
         min_distance = distance
         smallest_index = counter
       counter += 1
-    print smallest_index
-    print len(converted_reader)
-    print min_distance
-    return converted_reader[smallest_index]
+
+    address = converted_reader[smallest_index]["Address"]
+    state = converted_reader[smallest_index]["State"]
+    zip_code = converted_reader[smallest_index]["Zip Code"]
+
+    return "%(address)s %(state)s %(zip_code)s" % locals()
+
+
 
 
 print nearest_distance("1700 Union St, San Francisco, CA")

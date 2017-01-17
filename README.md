@@ -14,10 +14,18 @@ In the process I have figured out that I could get a better implementation that 
 * The minimum distance between coordinates is not always necessarily the best, due to the way actual route may go, so assuming the linear minimum distance will still be a fairly accurate representation of the closest location
 * Distance will not be negative
 
-# Instructions
+# Instructions (for ruby version)
 * Download the repo 
 * Install ruby on your machine - for instructions [click here](https://www.ruby-lang.org/en/documentation/installation/)
 * In the terminal type: gem install geocoder
 * In the terminal type: ruby runner.rb
 * After the prompt input the address
 * Voila!
+
+# Instructions (for python version)
+* Install python 2.7
+* Install pip (if not installed already)
+* In the terminal type: pip install geocoder
+* In the python_runner.py file change the origin address on line 35 to any desired address
+* In the terminal type: python python_runner.py
+
