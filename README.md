@@ -12,7 +12,7 @@ I would like to implement this into a simple App either with Rails or React, for
 
 # Instructions
 * Download the repo 
-* [Install ruby on your machine - instructions](https://www.ruby-lang.org/en/documentation/installation/)
+* Install ruby on your machine - for instructions [click here](https://www.ruby-lang.org/en/documentation/installation/)
 * In the terminal type: gem install geocoder
 * In the terminal type: ruby runner.rb
 * After the prompt input the address
