@@ -30,10 +30,11 @@ def nearest_distance(origin):
       counter += 1
 
     address = converted_reader[smallest_index]["Address"]
+    city = converted_reader[smallest_index]["City"]
     state = converted_reader[smallest_index]["State"]
     zip_code = converted_reader[smallest_index]["Zip Code"]
 
-    return "%(address)s %(state)s %(zip_code)s" % locals()
+    return "%(address)s, %(city)s, %(state)s %(zip_code)s" % locals()
 
 
 

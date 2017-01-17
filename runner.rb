@@ -23,7 +23,7 @@ def store_filter(address)
     counter += 1
   end
 
-  return "#{all[smallest_index][:address]} #{all[smallest_index][:state]} #{all[smallest_index][:zip_code]}"
+  return "#{all[smallest_index][:address]}, #{all[smallest_index][:city]}, #{all[smallest_index][:state]} #{all[smallest_index][:zip_code]}"
 
 end
 
