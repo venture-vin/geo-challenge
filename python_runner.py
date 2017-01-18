@@ -11,15 +11,13 @@ def nearest_distance(origin):
   lon1 = float(input[1])
 
   min_distance = float("inf")
-  counter = 0
   smallest_index = 0
 
   with open("store-locations.csv", "rU") as infile:
 
     reader = csv.DictReader(infile, delimiter=",")
-    converted_reader = list(reader)
 
-    for row in converted_reader:
+    for counter, row in enumerate(reader):
       lat2 = float(row["Latitude"])
       lon2 = float(row["Longitude"])
       distance = (haversine.distance((lat1, lon1), (lat2, lon2)))
@@ -27,13 +25,13 @@ def nearest_distance(origin):
       if distance < min_distance:
         min_distance = distance
         smallest_index = counter
-      counter += 1
 
-    address = converted_reader[smallest_index]["Address"]
-    city = converted_reader[smallest_index]["City"]
-    state = converted_reader[smallest_index]["State"]
-    zip_code = converted_reader[smallest_index]["Zip Code"]
+    address = reader[smallest_index]["Address"]
+    city = reader[smallest_index]["City"]
+    state = reader[smallest_index]["State"]
+    zip_code = reader[smallest_index]["Zip Code"]
 
+    ## WHOA! A read-world usage of locals()!!! How on earth did you end up using that?!?! Super cool, although at the same time totally insane ;)
     return "%(address)s, %(city)s, %(state)s %(zip_code)s" % locals()
 
 
